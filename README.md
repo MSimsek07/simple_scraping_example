@@ -21,7 +21,7 @@ This repository contains a Jupyter Notebook that scrapes and analyzes a dataset 
 
 To run the notebook, you need to have the following software and libraries installed:
 
-- Python 3.x
+- Python 3.10 (I prepared an anaconda environment and I suggest you to prepare too)
 - Jupyter Notebook
 - pandas
 - requests
@@ -37,7 +37,7 @@ pip install pandas requests beautifulsoup4 aiohttp asyncio
 
 ## Data
 
-The dataset is scraped from the website [https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=2](https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=2), which contains questions and answers related to legal matters. The data includes the following columns:
+The dataset is scraped from the website [https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=2](https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=), which contains questions and answers related to legal matters. The data includes the following columns:
 
 - `soru`: The question asked.
 - `cevap`: The answer provided.
@@ -158,4 +158,4 @@ The notebook provides a summary of the scraped data, including the total number 
 
 ## Conclusion
 
-The notebook demonstrates an efficient way to scrape and analyze a large dataset of legal questions and answers using both synchronous and asynchronous methods. The cleaned and saved data can be used for further analysis or application development.
+The notebook demonstrates an efficient way to scrape and analyze a dataset of legal questions and answers using both synchronous and asynchronous methods. The cleaned and saved data can be used for further analysis or application development.
