@@ -37,7 +37,7 @@ pip install pandas requests beautifulsoup4 aiohttp asyncio
 
 ## Data
 
-The dataset is scraped from the website [https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=2](https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=), which contains questions and answers related to legal matters. The data includes the following columns:
+The dataset is scraped from the website [https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=](https://www.hukuksorucevap.com.tr/sorucevap/?sayfa=), which contains questions and answers related to legal matters. The data includes the following columns:
 
 - `soru`: The question asked.
 - `cevap`: The answer provided.
@@ -93,9 +93,7 @@ A function is defined to clean the extracted text data by removing unnecessary w
 
 ```python
 def clean_data(doc):
-    metin = doc.replace("
-", " ").replace("
-", " ").replace("	", " ")
+    metin = doc.replace("", " ").replace("", " ").replace("	", " ")
     while "  " in metin:
         metin = metin.replace("  ", " ")
     return metin.strip()
