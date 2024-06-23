@@ -93,7 +93,7 @@ A function is defined to clean the extracted text data by removing unnecessary w
 
 ```python
 def clean_data(doc):
-    metin = doc.replace("", " ").replace("", " ").replace("	", " ")
+    metin = doc.replace("\n", " ").replace("\r", " ").replace("\t", " ")
     while "  " in metin:
         metin = metin.replace("  ", " ")
     return metin.strip()
